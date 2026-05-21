@@ -11,17 +11,8 @@ const footerLinks = {
     { label: "Mood Lights", href: "/shop" },
     { label: "LED Strips", href: "/shop" },
   ],
-  support: [
-    { label: "FAQ", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
-    { label: "Contact", href: "#" },
-  ],
   company: [
     { label: "About Us", href: "/about" },
-    { label: "Blog", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Press", href: "#" },
   ],
 };
 
@@ -38,9 +29,9 @@ export function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <div>
             <Link href="/" className="inline-flex items-center group">
               <Image
                 src="/images/Hero.png"
@@ -61,23 +52,6 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">Shop</h3>
             <ul className="space-y-2">
               {footerLinks.shop.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support Links */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Support</h3>
-            <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
