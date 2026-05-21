@@ -60,11 +60,11 @@ export function ShopFilters({
         <select
           value={selectedSort}
           onChange={(e) => handleSortChange(e.target.value)}
-          className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-violet-500"
+          className="px-4 py-2 rounded-lg bg-[#13131f] border border-white/10 text-white focus:outline-none focus:border-violet-500 cursor-pointer"
         >
-          <option value="featured">Featured</option>
-          <option value="price-low">Price: Low to High</option>
-          <option value="price-high">Price: High to Low</option>
+          <option value="featured" className="bg-[#13131f] text-white">Featured</option>
+          <option value="price-low" className="bg-[#13131f] text-white">Price: Low to High</option>
+          <option value="price-high" className="bg-[#13131f] text-white">Price: High to Low</option>
         </select>
       </div>
     </div>
