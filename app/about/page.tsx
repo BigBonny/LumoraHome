@@ -3,9 +3,16 @@ import Image from "next/image";
 import { Sparkles, Heart, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Stellux",
+  title: "About Us",
   description:
-    "Learn about Stellux's mission to transform spaces with premium ambient lighting for Gen Z and millennials.",
+    "Learn about Stellux's mission to transform spaces with premium ambient lighting. Quality-tested products for Gen Z and millennials.",
+  alternates: { canonical: "https://www.stellux.store/about" },
+  openGraph: {
+    title: "About Us | Stellux",
+    description: "Learn about Stellux's mission to transform spaces with premium ambient lighting.",
+    url: "https://www.stellux.store/about",
+    type: "website",
+  },
 };
 
 const values = [

@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   title: "Stellux | Transform Your Space Into a Vibe",
   description:
     "Premium ambient lighting for Gen Z & millennials. Galaxy projectors, LED mood lights, sunset lamps & more. Free shipping on orders over $50.",
+  alternates: { canonical: "https://www.stellux.store" },
+  openGraph: {
+    title: "Stellux | Transform Your Space Into a Vibe",
+    description: "Shop premium galaxy projectors, LED mood lights & ambient lighting. Free shipping over $50.",
+    url: "https://www.stellux.store",
+    type: "website",
+  },
 };
 
 export default async function HomePage() {

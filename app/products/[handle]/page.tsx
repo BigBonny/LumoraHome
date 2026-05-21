@@ -6,6 +6,7 @@ import { ProductForm } from "@/components/products/ProductForm";
 import { ProductCard } from "@/components/products/ProductCard";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { ShopifyProduct } from "@/types/shopify";
+import { ProductJsonLd } from "@/components/seo/JsonLd";
 
 interface ProductPageProps {
   params: { handle: string };
@@ -17,16 +18,31 @@ export async function generateMetadata({
   const product = await getProductByHandle(params.handle);
 
   if (!product) {
-    return {
-      title: "Product Not Found | Stellux",
-    };
+    return { title: "Product Not Found" };
   }
 
+  const description = product.seo.description || product.description.slice(0, 160);
+  const image = product.featuredImage?.url;
+  const url = `https://www.stellux.store/products/${product.handle}`;
+
   return {
-    title: `${product.title} | Stellux`,
-    description: product.seo.description || product.description.slice(0, 160),
+    title: product.seo.title || product.title,
+    description,
+    alternates: { canonical: url },
+    keywords: [product.title, product.productType, "ambient lighting", "Stellux", ...(product.tags || [])],
     openGraph: {
-      images: product.featuredImage ? [{ url: product.featuredImage.url }] : [],
+      title: product.title,
+      description,
+      url,
+      type: "website",
+      siteName: "Stellux",
+      images: image ? [{ url: image, width: 800, height: 800, alt: product.title }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.title,
+      description,
+      images: image ? [image] : [],
     },
   };
 }
@@ -63,6 +79,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const firstVariant = product.variants.nodes[0];
 
   return (
+    <>
+    <ProductJsonLd
+      name={product.title}
+      description={product.description.slice(0, 300)}
+      image={product.featuredImage?.url}
+      price={firstVariant?.price?.amount || "0"}
+      currency={firstVariant?.price?.currencyCode || "USD"}
+      availability={firstVariant?.availableForSale ?? true}
+      url={`https://www.stellux.store/products/${product.handle}`}
+    />
     <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Breadcrumb */}
@@ -147,5 +173,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         )}
       </div>
     </div>
+    </>
   );
 }

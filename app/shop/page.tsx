@@ -6,9 +6,16 @@ import { ShopFilters } from "@/components/shop/ShopFilters";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Shop | Stellux",
+  title: "Shop",
   description:
-    "Browse our collection of premium ambient lighting products. Galaxy projectors, LED mood lights, sunset lamps & more.",
+    "Browse Stellux's full collection of premium ambient lighting. Galaxy projectors, LED mood lights, sunset lamps & more. Free shipping over $50.",
+  alternates: { canonical: "https://www.stellux.store/shop" },
+  openGraph: {
+    title: "Shop | Stellux",
+    description: "Browse premium ambient lighting products. Free shipping over $50.",
+    url: "https://www.stellux.store/shop",
+    type: "website",
+  },
 };
 
 interface ShopPageProps {
