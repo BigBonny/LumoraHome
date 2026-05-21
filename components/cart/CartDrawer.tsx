@@ -53,9 +53,9 @@ export function CartDrawer() {
                 <div className="flex items-center gap-3">
                   <ShoppingBag className="w-6 h-6 text-violet-400" />
                   <h2 className="text-xl font-bold">Your Cart</h2>
-                  {cart?.totalQuantity > 0 && (
+                  {(cart?.totalQuantity ?? 0) > 0 && (
                     <span className="px-2 py-1 bg-violet-600/20 text-violet-300 text-sm rounded-full">
-                      {cart.totalQuantity} {cart.totalQuantity === 1 ? "item" : "items"}
+                      {cart!.totalQuantity} {cart!.totalQuantity === 1 ? "item" : "items"}
                     </span>
                   )}
                 </div>
