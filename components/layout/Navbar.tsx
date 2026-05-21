@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Menu, X, Sparkles, Zap } from "lucide-react";
+import { ShoppingBag, Menu, X, Zap } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 
 const navLinks = [
@@ -48,16 +49,15 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-violet-500/50 blur-lg rounded-full group-hover:bg-violet-500/70 transition-all" />
-              <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-lg shadow-violet-600/30">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-            </div>
-            <span className="font-heading text-xl font-bold gradient-text">
-              LumoraHome
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/Hero.png"
+              alt="LumoraHome"
+              width={260}
+              height={72}
+              className="h-14 md:h-20 w-auto object-contain -mt-2 transition-opacity group-hover:opacity-80"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

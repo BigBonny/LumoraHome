@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Twitter, Youtube, Sparkles, Lock, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { Instagram, Twitter, Youtube, Lock, ShieldCheck } from "lucide-react";
 
 const footerLinks = {
   shop: [
@@ -40,16 +41,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-violet-500/50 blur-lg rounded-full group-hover:bg-violet-500/70 transition-all" />
-                <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-lg shadow-violet-600/30">
-                  <Sparkles className="w-5 h-5 text-white" />
-                </div>
-              </div>
-              <span className="font-heading text-2xl font-bold gradient-text">
-                LumoraHome
-              </span>
+            <Link href="/" className="inline-flex items-center group">
+              <Image
+                src="/images/Hero.png"
+                alt="LumoraHome"
+                width={260}
+                height={80}
+                className="h-20 w-auto object-contain transition-opacity group-hover:opacity-80"
+              />
             </Link>
             <p className="mt-5 text-slate-400 text-sm max-w-xs leading-relaxed">
               Transform your space into a vibe with premium ambient lighting.

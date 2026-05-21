@@ -19,6 +19,11 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/faviconn.png",
+    shortcut: "/images/faviconn.png",
+    apple: "/images/faviconn.png",
+  },
   title: "LumoraHome | Transform Your Space Into a Vibe",
   description:
     "Premium ambient lighting for Gen Z & millennials. Galaxy projectors, LED mood lights, sunset lamps & more. Free shipping on orders over $50.",
