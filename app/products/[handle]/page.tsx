@@ -18,12 +18,12 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | LumoraHome",
+      title: "Product Not Found | Stellux",
     };
   }
 
   return {
-    title: `${product.title} | LumoraHome`,
+    title: `${product.title} | Stellux`,
     description: product.seo.description || product.description.slice(0, 160),
     openGraph: {
       images: product.featuredImage ? [{ url: product.featuredImage.url }] : [],

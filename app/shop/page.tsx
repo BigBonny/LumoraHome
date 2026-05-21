@@ -6,7 +6,7 @@ import { ShopFilters } from "@/components/shop/ShopFilters";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Shop | LumoraHome",
+  title: "Shop | Stellux",
   description:
     "Browse our collection of premium ambient lighting products. Galaxy projectors, LED mood lights, sunset lamps & more.",
 };

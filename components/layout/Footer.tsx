@@ -44,7 +44,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center group">
               <Image
                 src="/images/Hero.png"
-                alt="LumoraHome"
+                alt="Stellux"
                 width={260}
                 height={80}
                 className="h-20 w-auto object-contain transition-opacity group-hover:opacity-80"
@@ -126,7 +126,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} LumoraHome. Crafted with care for the
+            © {new Date().getFullYear()} Stellux. Crafted with care for the
             aesthetic generation.
           </p>
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     shortcut: "/images/faviconn.png",
     apple: "/images/faviconn.png",
   },
-  title: "LumoraHome | Transform Your Space Into a Vibe",
+  title: "Stellux | Transform Your Space Into a Vibe",
   description:
     "Premium ambient lighting for Gen Z & millennials. Galaxy projectors, LED mood lights, sunset lamps & more. Free shipping on orders over $50.",
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "sunset lamp",
   ],
   openGraph: {
-    title: "LumoraHome | Transform Your Space Into a Vibe",
+    title: "Stellux | Transform Your Space Into a Vibe",
     description:
       "Premium ambient lighting for your aesthetic bedroom setup. Shop galaxy projectors, LED mood lights & more.",
     type: "website",

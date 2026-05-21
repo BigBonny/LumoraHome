@@ -52,7 +52,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center group">
             <Image
               src="/images/Hero.png"
-              alt="LumoraHome"
+              alt="Stellux"
               width={260}
               height={72}
               className="h-14 md:h-20 w-auto object-contain -mt-2 transition-opacity group-hover:opacity-80"

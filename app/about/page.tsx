@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Sparkles, Heart, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | LumoraHome",
+  title: "About Us | Stellux",
   description:
-    "Learn about LumoraHome's mission to transform spaces with premium ambient lighting for Gen Z and millennials.",
+    "Learn about Stellux's mission to transform spaces with premium ambient lighting for Gen Z and millennials.",
 };
 
 const values = [
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </span>
           </div>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold mb-5 leading-tight tracking-tight">
-            About <span className="gradient-text">LumoraHome</span>
+            About <span className="gradient-text">Stellux</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             We&apos;re on a mission to help Gen Z and millennials transform
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <h2 className="font-heading text-2xl font-bold">Our Story</h2>
               <p className="text-slate-400 leading-relaxed">
-                LumoraHome started with a simple frustration: we could not find ambient
+                Stellux started with a simple frustration: we could not find ambient
                 lighting that actually looked good in real life. Everything was either
                 cheap plastic junk or overpriced designer pieces. We wanted something
                 in between — quality lighting that actually transformed a room without

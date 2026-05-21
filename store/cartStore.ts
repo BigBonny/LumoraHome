@@ -153,7 +153,7 @@ export const useCartStore = create<CartState>()(
       },
     }),
     {
-      name: "lumorahome-shopify-cart",
+      name: "stellux-shopify-cart",
       partialize: (state) => ({ cartId: state.cartId }),
     }
   )

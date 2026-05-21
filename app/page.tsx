@@ -8,7 +8,7 @@ import { TrustBadges } from "@/components/ui/TrustBadges";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "LumoraHome | Transform Your Space Into a Vibe",
+  title: "Stellux | Transform Your Space Into a Vibe",
   description:
     "Premium ambient lighting for Gen Z & millennials. Galaxy projectors, LED mood lights, sunset lamps & more. Free shipping on orders over $50.",
 };
