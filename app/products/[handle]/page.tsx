@@ -6,7 +6,7 @@ import { ProductForm } from "@/components/products/ProductForm";
 import { ProductCard } from "@/components/products/ProductCard";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { ShopifyProduct } from "@/types/shopify";
-import { ProductJsonLd } from "@/components/seo/JsonLd";
+import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface ProductPageProps {
   params: { handle: string };
@@ -88,6 +88,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
       currency={firstVariant?.price?.currencyCode || "USD"}
       availability={firstVariant?.availableForSale ?? true}
       url={`https://www.stellux.store/products/${product.handle}`}
+    />
+    <BreadcrumbJsonLd
+      items={[
+        { name: "Home", url: "https://www.stellux.store" },
+        { name: "Shop", url: "https://www.stellux.store/shop" },
+        ...(product.productType ? [{ name: product.productType, url: `https://www.stellux.store/shop` }] : []),
+        { name: product.title, url: `https://www.stellux.store/products/${product.handle}` },
+      ]}
     />
     <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

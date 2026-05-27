@@ -6,6 +6,12 @@ import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoscript,
+  GoogleAnalytics,
+} from "@/components/seo/Analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -95,7 +101,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+      <head>
+        <GoogleTagManager />
+        <GoogleAnalytics />
+      </head>
       <body className="antialiased min-h-screen flex flex-col bg-[#0a0a1a] text-white">
+        <GoogleTagManagerNoscript />
         <OrganizationJsonLd url="https://www.stellux.store" />
         <WebsiteJsonLd url="https://www.stellux.store" />
         <AnnouncementBar />
@@ -103,6 +114,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CartDrawer />
+        <Analytics />
       </body>
     </html>
   );

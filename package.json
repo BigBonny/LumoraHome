@@ -15,6 +15,7 @@
     "@shopify/hydrogen-react": "^2026.4.2",
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.5.0",
+    "@vercel/analytics": "^2.0.1",
     "framer-motion": "^11.18.2",
     "graphql-request": "^7.4.0",
     "lucide-react": "^0.473.0",
